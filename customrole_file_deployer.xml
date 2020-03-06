@@ -1,0 +1,34 @@
+<role scriptid="customrole1027">
+  <centertype>BASIC</centertype>
+  <employeerestriction>NONE</employeerestriction>
+  <employeeviewingallowed>F</employeeviewingallowed>
+  <issalesrole>F</issalesrole>
+  <issupportrole>F</issupportrole>
+  <iswebserviceonlyrole>F</iswebserviceonlyrole>
+  <name>Deployer Access</name>
+  <restrictbydevice>F</restrictbydevice>
+  <restrictip>F</restrictip>
+  <restricttimeandexpenses>F</restricttimeandexpenses>
+  <permissions>
+    <permission>
+      <permkey>LIST_WEBSITE</permkey>
+      <permlevel>FULL</permlevel>
+    </permission>
+    <permission>
+      <permkey>LIST_FIND</permkey>
+      <permlevel>FULL</permlevel>
+    </permission>
+    <permission>
+      <permkey>ADMI_LOGIN_OAUTH</permkey>
+      <permlevel>FULL</permlevel>
+    </permission>
+    <permission>
+      <permkey>LIST_FILECABINET</permkey>
+      <permlevel>FULL</permlevel>
+    </permission>
+    <permission>
+      <permkey>ADMI_ALLOW_JS_HTML_UPLOAD</permkey>
+      <permlevel>FULL</permlevel>
+    </permission>
+  </permissions>
+</role>
