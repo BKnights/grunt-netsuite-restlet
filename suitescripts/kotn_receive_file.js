@@ -72,14 +72,14 @@ define(["require", "exports", "N/file", "N/log", "N/record", "N/search"], functi
             //   details:JSON.stringify(file.Encoding)
             // });
             var rootFolderId = data.rootId || null;
-            var folderPath = data.folderPath.split('/').filter(function (f) { return f; });
+            var folderPath = data.folderPath.split('/').filter(function (f) { return f && f != '.'; });
             var content = data.content;
             delete data.content;
             log.debug({
                 title: 'received ' + data.fileName + ' of ' + content.length + 'chars in ' + JSON.stringify(folderPath),
                 details: JSON.stringify(data, null, ' ')
             });
-            var folderId = createFolderPath(rootFolderId, folderPath, false);
+            var folderId = folderPath.length ? createFolderPath(rootFolderId, folderPath, false) : rootFolderId;
             var fileSpec = {
                 name: data.fileName,
                 fileType: getFileType(data.mimeType, getExt(data.fileName)),

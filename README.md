@@ -10,10 +10,9 @@ First install the npm module grunt-netsuite and copy or rename the ns_config-sam
 npm install grunt-netsuite --save-dev
 ```
 
-In order to use the RESTlet you'll need to create access. See the Netsuite help for creating an integration and access tokens.
+In order to use the RESTlet you'll need to create access. See the Netsuite help for creating an integration and token based access.
 
 When the integration is created Netsuite will present integration id and secret tokens. These should be copied and pasted to the ns_config.json file.
-
 
 When the access tokens are created they too should be copied and pasted to the ns_config.json file.
 

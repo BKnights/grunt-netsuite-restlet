@@ -86,7 +86,7 @@ export function post(data){
     //   details:JSON.stringify(file.Encoding)
     // });
     var rootFolderId = data.rootId || null;
-    var folderPath = data.folderPath.split('/').filter(f=>f);
+    var folderPath = data.folderPath.split('/').filter(f=>f && f != '.');
     var content = data.content;
 
     delete data.content;
@@ -96,7 +96,7 @@ export function post(data){
       details:JSON.stringify(data, null, ' ')
     });
 
-    var folderId = createFolderPath(rootFolderId, folderPath, false);
+    var folderId = folderPath.length ? createFolderPath(rootFolderId, folderPath, false) : rootFolderId;
 
     var fileSpec = {
       name:data.fileName,
